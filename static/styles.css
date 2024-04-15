@@ -1,0 +1,325 @@
+body {
+    margin: 0;
+}
+
+.upSide {
+
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    animation: show-up 1.6s ease;
+}
+
+.parentDiv {
+    background: rgb(238, 174, 202);
+    background: -moz-radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+    background: -webkit-radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+    background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#eeaeca", endColorstr="#94bbe9", GradientType=1);
+
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+}
+
+#inboxButton{
+    border-radius: 20px;
+}
+#composeButton{
+    border-radius: 20px;
+}
+
+.aboveCompose {
+    background-color: black;
+    left: 0;
+}
+
+#symbolImg {
+    margin-top: 25px;
+    width: 210px;
+}
+
+#composeButton{
+    border-radius: 20px;
+}
+
+#inboxButton{
+    border-radius: 20px;
+}
+
+.ComInbox {
+    visibility: hidden;
+    position: fixed;
+    height: 100%;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+}
+
+.underNeth {
+    height: 100%;
+    display: grid;
+    visibility: visible;
+    align-content: center;
+    justify-content: center;
+    animation: show-up 1.6s ease;
+}
+
+#gameChanger {
+    width: 400px;
+    height: 400px;
+    display: grid;
+}
+
+
+#composeScreen_2 {
+
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+#composeBack-btn{
+    border-radius: 20px;
+    width: 80px;
+    height: 37px;
+    font-size: small;
+}
+
+#composeScreen_BackButton {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 27%;
+    height: 55px;
+    display: flex;
+    justify-content: start;
+}
+
+input{
+    width: 340px;
+    height: 28px;
+    opacity: 60%;
+    padding: 15px;
+}
+
+#emailItemHandler{
+    display: grid;
+}
+
+#emailMessage{
+    width: 340px;
+    opacity: 60%;
+    resize: none;
+    background-color: white;
+    margin: 15px;
+    border-radius: 15px;
+    border: 1px solid #ccc;
+    padding-left: 10px;
+    padding-top: 5px;
+    height: 160px;
+    overflow: auto;
+}
+
+#sendButtonDiv{
+    display: flex;
+    justify-content: center;
+}
+
+#sendEmail-btn{
+    border-radius: 20px;
+    width: 110px;
+    height: 32px;
+    font-size: small;
+}
+
+#composeArea{
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
+/* Inbox Specs */
+
+.inboxController{   
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+.backFromInbox
+{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 25%;
+    height: 55px;
+    display: flex;
+    justify-content: start;
+}
+
+#inboxBack-btn{
+    
+    border-radius: 20px;
+    width: 80px;
+    height: 37px;
+    font-size: small;
+}
+
+#inboxRefresh-btn{
+    
+    border-radius: 20px;
+    height: 37px;
+    font-size: small;
+}
+
+#inboxScreen{
+    margin-top: 8%
+}
+
+#inboxArea{
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
+@media (min-width: 1450px) {
+    #inboxItemHandler{
+        display: grid;
+        width: 42%;
+    }
+    
+}
+
+@media (max-width: 1449px) and (min-width: 1120px) {
+    #inboxItemHandler{
+        display: grid;
+        width: 45%;
+    }
+    
+}
+
+@media (max-width: 1119px) and (min-width: 1000px) {
+    #inboxItemHandler{
+        display: grid;
+        width: 53%;
+    }
+    
+}
+
+@media (max-width: 999px) and (min-width: 200px) {
+    #inboxItemHandler{
+        display: grid;
+        width: 48%;
+    }
+    
+}
+
+#inboxMessageMain
+    {
+        width: 100%;
+        opacity: 60%;
+        background-color: white;
+        border-radius: 15px;
+        border: 1px solid #ccc;
+        height: 300px;
+        overflow: auto;
+    }
+
+.openMsg{
+    text-decoration: none !important; 
+    color: black !important;
+}
+
+
+
+
+
+
+
+/* Animations */
+
+.messageArea::-webkit-scrollbar {
+    width: 7px;
+}
+ 
+.messageArea::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+ 
+}
+ 
+.messageArea::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+  border-radius: 8px;
+}
+
+
+
+.inboxMain::-webkit-scrollbar {
+    width: 7px;
+}
+ 
+.inboxMain::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+ 
+}
+ 
+.inboxMain::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+  border-radius: 8px;
+}
+
+
+
+
+#message-modal{
+
+}
+
+
+@keyframes show-up {
+    0% {
+        opacity: 0%;
+    }
+
+    100% {
+        opacity: 100%;
+    }
+}
+
+@keyframes hide-out {
+    0% {
+        opacity: 100%;
+    }
+
+    100% {
+        opacity: 0%;
+    }
+}
+
+
+@keyframes swipe-in{
+    0%{
+        transform: translateX(100%);
+        opacity: 0%;
+    }
+    100%{
+        transform: translate(0%);
+        opacity: 100%;
+    }
+}
+
+@keyframes swipe-out{
+    0%{
+        transform: translateX(0%);
+        opacity: 100%;
+    }
+    100%{
+        transform: translate(100%);
+        opacity: 0%;
+    }
+}

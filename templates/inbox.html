@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Title</title>
+</head>
+<body>
+        <div class="parentDiv">
+            <div class="upSide">
+            <img id="symbolImg" src="{{ url_for('static', filename='symbol.png') }}" alt="logo_main">
+        </div>
+            <div class="ComInbox" id="inboxScreen" style="visibility: visible;
+            position: relative;"  >
+            <div class="inboxController">
+                <div class="backFromInbox">
+                    <div>
+                        <a href="/home">
+                            <button id="inboxBack-btn" class="btn btn-primary btn-lg" style="height: 100%">Back</button>
+                        </a>
+                    </div>
+                    
+                </div>
+                <div id="inboxArea">
+                    <div id="inboxItemHandler">
+                        <div class="inboxMain" id="inboxMessageMain">
+{#                            {% for item in mail_inbox_items %}#}
+{#                                        <a class="mail-button">#}
+{#                                            {{ item.subject }} (From: {{ item.sender }})#}
+{#                                        </a>#}
+{#                            {% endfor %}#}
+                            <table class="table table-striped">
+                                <tbody id="inboxTable">
+                                {% for item in mail_inbox_items %}
+                                    <tr class="Inbox_messagesRecieved">
+                                        <td>
+                                            <a data-message-id="{{ item.id }}" class="openMsg" style="cursor: pointer">
+                                                {{ item.Subject }}
+                                            </a>
+                                        </td>
+                                    </tr>
+                                {% endfor %}
+
+
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+
+                    <div id="message-modal" style="display: none;">
+                        <h2>Message Details</h2>
+                        <div id="message-from">Loading...</div>
+                        <div id="message-date"></div>
+                        <div id="message-subject"></div>
+                        <div id="message-content"></div>
+                        <button style="border-radius: 20px;" class="btn btn-primary btn-sm" onclick="closeModal()">Close</button>
+                      </div>
+
+
+                </div>
+            </div>
+        </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <script src="{{ url_for('static', filename='viewMail.js') }}"></script>
+    <script>
+        // Hide the green tick after 5 seconds
+        setTimeout(function() {
+            document.getElementById("greenTick").style.display = "none";
+        }, 5000);
+    </script>
+
+</body>
+</html>
