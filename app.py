@@ -10,7 +10,7 @@ import codecs
 import string
 
 # radix healthcare app password
-APP_PASSWORD = "etjx qvrf pwnp xhrk"
+from envs import APP_PASSWORD
 
 class EmailClient:
     
