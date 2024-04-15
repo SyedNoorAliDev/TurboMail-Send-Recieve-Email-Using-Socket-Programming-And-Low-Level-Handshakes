@@ -1,5 +1,5 @@
 # TurboMail
-# Send Recieve Email Communication with Web Based Client Using Socket Programming
+# Send/Recieve Email with Web Based Client Using Socket Programming
 
 Turbo Mail is a Flask-based web application that allows users to compose and send emails via Gmail SMTP and view their inbox.
 
