@@ -26,19 +26,13 @@ Turbo Mail is a Flask-based web application that allows users to compose and sen
 git clone <repository_url>
 ```
 
-2. Install the required Python packages using pip:
-
-```bash
-pip install -r requirements.txt
-```
-
-3. Run the Flask application:
+2. Run the Flask application:
 
 ```bash
 python app.py
 ```
 
-4. Open a web browser and navigate to `http://localhost:5000` to access the application.
+3. Open a web browser and navigate to `http://localhost:5000` to access the application.
 
 ## Usage
 
@@ -76,5 +70,3 @@ Contributions to Turbo Mail are welcome! If you find any bugs or have suggestion
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
-
-Feel free to customize this README according to your project's specific requirements and branding. Let me know if you need further assistance!
