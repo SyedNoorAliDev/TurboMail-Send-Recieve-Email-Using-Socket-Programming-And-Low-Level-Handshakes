@@ -1,0 +1,1 @@
+APP_PASSWORD = 'mailclient@123.some'
